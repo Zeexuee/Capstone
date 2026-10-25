@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Warna merek corporate flat design, selaras dengan Gambar 3.1 */
+    --color-merek-50: #eef4fb;
+    --color-merek-100: #d6e4f7;
+    --color-merek-500: #2b6cb0;
+    --color-merek-600: #1a4f8b;
+    --color-merek-700: #133b69;
+    --color-murah: #0f766e;
+    --color-mahal: #b45309;
+}
+
+@layer base {
+    :focus-visible {
+        outline: 2px solid var(--color-merek-600);
+        outline-offset: 2px;
+    }
+}
+
+/* ApexCharts memakai font bawaannya sendiri; samakan dengan halaman. */
+.apexcharts-canvas,
+.apexcharts-canvas text {
+    font-family: var(--font-sans) !important;
+}
